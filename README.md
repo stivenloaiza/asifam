@@ -27,3 +27,13 @@ Asifam es un asistente de voz y recordatorios diseñado para tablets Android en 
 Este es un software libre y desencadenado lanzado al dominio público. Consideramos que el conocimiento y las herramientas para el bienestar familiar deben ser patrimonio de la humanidad, sin barreras legales ni burocracia.
 
 Puedes hacer lo que quieras con este código. Sin condiciones. Sin límites.
+
+## Configuración de Recursos (Iconos y Splash)
+Para actualizar el icono de la app y la pantalla de inicio (splash screen):
+1. Reemplaza `assets/icon/icon.png` (512x512) con tu diseño.
+2. Si usas iconos adaptativos en Android, reemplaza `assets/icon/icon_foreground.png`.
+3. Ejecuta los siguientes comandos:
+   ```bash
+   flutter pub run flutter_launcher_icons
+   flutter pub run flutter_native_splash:create
+   ```
