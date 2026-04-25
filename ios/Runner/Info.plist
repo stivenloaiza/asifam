@@ -68,7 +68,11 @@
 		</array>
 		<key>UIStatusBarHidden</key>
 		<true/>
-		<key>UIViewControllerBasedStatusBarAppearance</key>
-		<false/>
-	</dict>
-</plist>
+ 	<key>UIViewControllerBasedStatusBarAppearance</key>
+ 	<false/>
+ 	<key>LSApplicationQueriesSchemes</key>
+ 	<array>
+ 		<string>https</string>
+ 	</array>
+ 	</dict>
+ </plist>

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../providers/reminder_provider.dart';
 import '../widgets/reminder_form.dart';
 import '../widgets/reminder_list.dart';
@@ -53,29 +54,29 @@ class DashboardView extends StatelessWidget {
                         const Text('Asifam', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                       ],
                     ),
-                    content: const SingleChildScrollView(
+                    content: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Versión 1.0.0',
                             style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(height: 20),
-                          Text(
+                          const SizedBox(height: 20),
+                          const Text(
                             'Desarrollador: loacod@codificando.xyz',
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
-                          SizedBox(height: 12),
-                          Text(
+                          const SizedBox(height: 12),
+                          const Text(
                             'Este es un proyecto personal open source y gratuito desarrollado y asistido con IA para la función familiar.',
                             style: TextStyle(color: Colors.white70),
                           ),
-                          SizedBox(height: 24),
-                          Divider(color: Colors.white10),
-                          SizedBox(height: 16),
-                          Text(
+                          const SizedBox(height: 24),
+                          const Divider(color: Colors.white10),
+                          const SizedBox(height: 16),
+                          const Text(
                             'LICENCIA REVOLUCIONARIA: THE UNLICENSE',
                             style: TextStyle(
                               color: Color(0xFF8B5CF6), 
@@ -84,11 +85,23 @@ class DashboardView extends StatelessWidget {
                               letterSpacing: 1.2
                             ),
                           ),
-                          SizedBox(height: 12),
-                          Text(
+                          const SizedBox(height: 12),
+                          const Text(
                             'Este software es libre de forma absoluta. Se entrega al dominio público sin restricciones, sin condiciones y sin burocracia. '
                             'Eres libre de usarlo, copiarlo, modificarlo o venderlo como desees. La libertad es total.',
                             style: TextStyle(color: Colors.white54, fontSize: 13, height: 1.5),
+                          ),
+                          const SizedBox(height: 16),
+                          InkWell(
+                            onTap: () => launchUrl(Uri.parse('https://github.com/stivenloaiza/asifam')),
+                            child: const Text(
+                              'https://github.com/stivenloaiza/asifam',
+                              style: TextStyle(
+                                color: Color(0xFF8B5CF6),
+                                decoration: TextDecoration.underline,
+                                fontSize: 13,
+                              ),
+                            ),
                           ),
                         ],
                       ),
